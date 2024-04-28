@@ -1,0 +1,63 @@
+.page-container {
+font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+    /* Padding around the entire page */
+}
+
+/* Style for form container */
+.form-container {
+
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    /* White background for the form */
+    padding: 20px;
+    /* Padding inside the form container */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Box shadow for a subtle lift */
+}
+
+/* Style for form labels */
+.ant-form-item-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    /* Space between label and input */
+}
+
+/* Style for form inputs */
+.ant-input {
+    width: 100%;
+    padding: 8px;
+    /* Padding inside the input fields */
+    border: 1px solid #d9d9d9;
+    /* Border color */
+    border-radius: 4px;
+    /* Rounded corners for inputs */
+}
+
+/* Style for TimePicker */
+.ant-picker-time-panel {
+    width: 240px;
+}
+
+/* Style for submit button */
+.primary-button {
+    background-color: #1890ff;
+    /* Your primary color */
+    color: #fff;
+    /* Your text color */
+    border: none;
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border-radius: 4px;
+    /* Rounded corners for the button */
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #40a9ff;
+    /* Your hover color */
+}

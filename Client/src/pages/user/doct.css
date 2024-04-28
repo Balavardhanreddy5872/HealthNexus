@@ -1,0 +1,62 @@
+.user-account-page {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* max-width: 1000px; */
+    margin: 20px auto;
+    padding: 20px;
+    /* background: #f5f5f5; */
+    /* Soft background for the whole page */
+}
+
+.user-appointments-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.user-appointments-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* background-color: #fff; */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.user-appointments-table th,
+.user-appointments-table td {
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.user-appointments-table th {
+    background-color: #212529;
+    color: white;
+    font-weight: normal;
+}
+
+.user-appointments-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.user-appointments-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.user-appointments-table tbody tr:last-of-type {
+    border-bottom: 2px solid #212529;
+}
+
+.user-appointments-table tbody tr:hover {
+    background-color: #eaecef;
+}

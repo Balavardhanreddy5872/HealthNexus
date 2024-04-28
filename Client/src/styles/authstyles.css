@@ -1,0 +1,54 @@
+/* Import animate.css for animations */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* Additional styles and animations for the registration page */
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  flex-direction: column;
+  animation: fadeIn 1s ease; /* Add fade-in animation */
+}
+
+.form-container form {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  background-color: #fff;
+  width: 500px;
+  animation: slideInDown 0.5s ease; /* Add slide-in-down animation */
+}
+
+.form-container form .title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  animation: bounceIn 0.5s ease; /* Add bounce-in animation */
+}
+
+.form-container form input {
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  margin: 10px;
+  animation: fadeInUp 0.5s ease; /* Add fade-in-up animation */
+}
+
+.form-container form button {
+  border: 1px solid black;
+  border-radius: 0;
+  background-color: #000;
+  color: white;
+  width: 250px;
+  margin: 20px;
+  animation: pulse 0.5s infinite; /* Add pulse animation */
+}
+
+.form-container form button:hover {
+  border: 1px solid black;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
+  animation: shake 0.5s ease; /* Add shake animation on hover */
+}

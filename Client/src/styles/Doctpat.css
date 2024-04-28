@@ -1,0 +1,100 @@
+.registration-container {
+    max-width: 600px;
+    background-color: #ffffff;
+    /* Crisp white background */
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Modern font */
+}
+
+.registration-container h2 {
+    color: #2F4F4F;
+    /* Dark Slate Gray for header */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.registration-form {
+    display: grid;
+    grid-gap: 15px;
+    color: #333;
+    /* Darker text for better readability */
+}
+
+.registration-form label {
+    font-size: 16px;
+    color: #5A5A5A;
+    /* Slightly lighter for labels */
+    margin-bottom: 5px;
+    display: block;
+    /* Ensure labels are block-level for consistent alignment */
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #E8E8E8;
+    /* Lighter border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #2F4F4F;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #4fb5e6;
+    /* Forest Green for submission button */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.registration-form button:hover {
+    background-color: #4fb5e6;
+    /* Darker shade on hover */
+}
+
+/* Enhancements for focus on form fields */
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.error {
+    color: red;
+    /* margin-top: 2px; */
+    font-size: 15px;
+    font-weight: 10px;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .registration-container {
+        padding: 30px 20px;
+    }
+
+    .registration-form label {
+        font-size: 15px;
+    }
+}

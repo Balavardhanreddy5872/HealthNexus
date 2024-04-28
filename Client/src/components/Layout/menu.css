@@ -1,0 +1,10 @@
+.activeLink {
+  background-color: white;
+  color: black;
+  /* Optionally, set the text color for active link */
+
+}
+
+.list-group-item-active[aria-expanded="true"]{
+  background-color: whitesmoke !important;
+}

@@ -1,0 +1,552 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.labtest{
+    margin-left: 20px;
+}
+.image1{
+    display: flex;
+    background-color: #e0f8ff;
+}
+.error {
+    color: red;
+    font-size: 11px;
+  }
+.form1{
+   display: inline-block;
+   border: 2px white;
+   margin: 50px;
+   animation: lab-test 1s;
+}
+#fm{
+    left: 10px;
+}
+
+.formfill{
+  width: 30%;
+  height: 50%;
+ /* background-color: #E2C06A; */
+ background-color: skyblue;
+ left: 10px;
+ margin: 50px;
+ margin-top: 30px;
+ margin-left: 10px;
+ animation: lab-test 1s;
+}
+img{
+    width: 60%;
+}
+input{
+    border: none;
+    border-bottom: 2px solid black;
+    top:10px;
+}
+label{
+    color: rgb(84, 54, 231);
+}.button{
+    background-color: #24aeb1;
+}
+.swa-matter button{
+    background-color:#5BB0DD;
+    width:50%;
+    float: left;
+    width: 150px;
+    /* border: 2px solid red; */
+    
+}
+.disease p{
+    font-size: 20px;
+}
+div{
+    display: block;
+}
+.pop h2, p{
+    margin: 10px;
+}
+.labtest{
+    background-color: white;
+    margin: 40px;
+    padding-left: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.test-1{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 20px;
+}
+.spackages{
+    margin:40px;
+    border-color: whitesmoke;
+}
+.spackages > p{
+    margin-top: 10px;
+}
+.selling{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center; 
+    font-size: 18px;
+    font-family: 'Gloock', serif;
+    grid-column-gap: 10px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.selling span{
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    font-size:25px;
+}
+.swasthya{
+    background: #f5cba8 ;
+    margin:10px;
+    font-family: 'Gloock', serif;
+    position: relative;
+    display: flex;
+    padding: 3px;
+}
+.swasthya .swa-image img{
+    flex-direction:column;
+    width: 250px;
+}
+.shield{
+    background: #afd7e4;
+    margin:10px;
+    font-family: 'Gloock', serif;
+    position: relative;
+    display: flex;
+    padding: 3px;
+}
+.Health{
+    background: hsl(73, 52%, 83%);
+    margin:10px;
+    font-family: 'Gloock', serif;
+    position: relative;
+    padding: 3px;
+    display: flex;
+}
+.shield .s-image img{
+    width: 250px;
+}
+.h-image img{
+    width: 200px;
+}
+.diabetes{
+    background: #b1e1da;
+    margin:10px;
+    position: relative;
+    font-family: 'Gloock', serif;
+    display: flex;
+    padding: 3px;
+}
+.Aarogyam{
+    background:#9fc6c0;
+    margin:10px;
+    font-family: 'Gloock', serif;
+    position: relative;
+    display: flex;
+    padding: 3px;
+}
+.Aarogyam .a-image img{
+    width: 150px;
+}
+.nhealthy{
+    background: #d8e4ae;
+    margin: 10px;
+    font-family: 'Gloock', serif;
+    position: relative;
+    display: flex;
+    padding: 3px;
+}
+.nhealthy .n-image img{
+    width: 280px;
+}
+.screens{
+    background: #f4d0b2;
+    margin: 10px;
+    position: relative;
+    font-family: 'Gloock', serif;
+    display: flex;
+    padding: 3px;
+}
+.screens .sm-image img{
+    right: 0px;
+    width: 200px;
+}
+.customers{
+    position: relative;
+    margin: 50px 20px;
+}
+.customers > p{
+    padding-left: 20px;
+}
+.boxes{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+}
+.manzo{
+    display: inline-block;
+    
+}
+ .box1,.box2,.box3{
+    border: 1px solid rgb(85, 237, 121);
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 4px 4px 4px black;
+    background-color: #6B77E3;
+    width: 500px;
+}
+.light{
+    margin: 30px;
+}
+.high{
+   /* display: flex;
+   justify-content: space-around;
+   margin: 20px; */
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-bottom: 10px;
+   margin-left: 200px;
+}
+.hh1,.hh2,.hh3,.hh4{
+    background-color: white;
+    padding: 20px;
+    display:inline-block;
+    margin: 10px;
+}
+b{
+    padding-left: 20px;
+}
+.app{
+    display: flex;
+    background-color: rgb(240, 98, 126);
+    height: 100px;
+}
+.app1{
+    display: inline-block;
+    margin-left: 500px;
+
+}
+.bhw{
+    display: inline-block;
+}
+.bhw1{
+    display: inline-block;
+}
+.app2{
+    display: inline-block;
+    margin-left: 30px;
+    padding: 30px;
+    
+}
+#btn{
+    justify-content: center;
+    text-decoration: none;
+}
+.button-wrap{
+    margin-top: 10px;
+    position: absolute;
+}
+.now{
+    background-color: #fff;
+    color: black;
+    border: none;
+    font-weight: 700;
+    padding: 0px 15px;
+    border-radius: 8px;
+    font-size: 14px !important;
+    line-height: 16px;
+    height: 48px;
+    width: 114px;
+    text-transform: capitalize;
+    margin: 10px;
+}
+.partners{
+    background-color: #bb2a9e;
+    
+    margin:50px 30px;
+}
+.partners h2,p{
+    margin: 20px;
+}
+.image-lab{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    width: 100%;
+}
+button a{
+    color: white;
+}
+.labs{
+    background-color: #24aeb1;
+}
+.labs ul{
+   list-style-type: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.lnk{
+    text-decoration: none;
+}
+.labs li a{
+    padding:10px;
+    color: white;
+}
+#grp {
+ width: 50px;
+ margin-left: 100px;
+ margin-top: 10px;
+}
+.nexus{
+    display:inline-block;
+}
+.nxs{
+    display: inline-block;
+    padding-left:10px ;
+    top: 10px;
+}
+input:focus{
+    outline: none;
+}
+hr{
+    width: 1200px;
+    margin-left: 50px;
+}
+.foot{
+    margin: 30px 30px;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto; */
+    /* justify-content: space-evenly; */
+    background-image:  linear-gradient(to bottom,white 30%,rgba(36,174,177,.7) 130%);
+}
+.ft-txt{
+    display: flex;
+    justify-content: space-evenly;
+}
+.p-partner{
+    display: flex;
+    justify-content: space-around;
+}
+.p-partner img{
+    width: 120px;
+}
+.success-message{
+    margin-top:10px;
+    display: block;
+    line-height: 1.2em;
+    font-size: 1rem;
+    background: #e5efe5;
+    color: #006400;
+    padding: 5px;
+    position: relative;
+    width: 300px;
+}
+.arrow_button{
+    margin-left: 20px;
+    text-decoration: none;
+    
+}
+.foot ul{
+    padding: 5px;
+}
+.foot li{
+  list-style-type: none;
+  padding: 2px;
+}
+
+.but{
+    padding: 20px;
+}
+.swasthya img{
+   bottom: 0;
+   position: absolute;
+   width: 350px;
+   left: 120px;
+
+}
+.shield img {
+     bottom: 0;
+     position: absolute;
+      width: 350px;
+     right: 10px;
+}
+.shield-matter {
+    position: absolute;
+}
+.shield-matter button {
+    background-color: #5BB0DD;
+    width: 50%;
+}
+
+.shield .shield-matter button {
+    float: left;
+    width: 150px;
+}
+.Health img {
+    bottom: 0;
+    position: absolute;
+    width: 300px;
+    right: 0px;
+}
+
+.Health-matter {
+    position: relative;
+    z-index: 1;
+}
+
+.Health button {
+    background-color: #5BB0DD;
+    width: 150px;
+    float: left;
+}
+.diabetes img {
+    bottom: 0;
+    position: absolute;
+    width: 300px;
+    right: 0px;
+}
+
+.diabetes-matter {
+    position: relative;
+    z-index: 1;
+}
+
+.diabetes button {
+    background-color: #5BB0DD;
+    width: 150px;
+    float: left;
+}
+.Aarogyam img {
+    bottom: 0;
+    position: absolute;
+    width: 300px;
+    right: 0px;
+}
+
+.Aarogyam-matter {
+    position: relative;
+    z-index: 1;
+}
+
+.Aarogyam button {
+    background-color: #5BB0DD;
+    width: 150px;
+    float: left;
+}
+.nhealthy img {
+    bottom: 0;
+    position: absolute;
+    float: right;
+    right: 0px;
+}
+
+.nhealthy-matter {
+    position: relative;
+    z-index: 1;
+}
+
+.nhealthy button {
+    background-color: #5BB0DD;
+    width: 150px;
+    float: left;
+}
+.screens img {
+    bottom: 0;
+    position: absolute;
+    width: 250px;
+    left: 80px;
+}
+
+.screens-matter {
+    position: relative;
+    z-index: 1;
+}
+
+.screens button {
+    background-color: #5BB0DD;
+    width: 150px;
+    float: left;
+}
+@media screen and (max-width:1511px){
+    body>div.hero_area>div.sp>div>div.swasthya>img{
+        width: 300px;
+        left: 50px;
+    }
+   
+}
+@media  screen and (max-width:1100px) {
+    .image1{
+        flex-direction: column;
+        align-items: center;
+    }
+    #bn{
+        width: auto;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    body > div.app > div.app1{
+        margin: 0;
+    }
+    body > div.app{
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:514px) {
+    body > div.app{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .hh{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    body > div.labs > ul{
+        flex-direction: column;
+    }
+    .r{
+        width: 160px;
+    }
+}
+@media screen and (max-width:750px){
+    body > div > div.sp > div{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width:560px){
+    body > div > div.sp > div{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+@media  screen and (max-width:926px) {
+   .swasthya .swa-matter{
+       text-align: center;
+       
+    }
+}
+@media (max-width:916px) {
+    .selling .swasthya .swa-matter p{
+        word-break: break-word;
+    }
+}
+@keyframes lab-test {
+      0%{
+      opacity: 0;
+      transform: rotateX(150deg);
+    }
+    50%{
+        opacity:1;
+    }
+}
