@@ -41,6 +41,8 @@
     "react-scripts": "^5.0.1",
     "rotating-file-stream": "^3.2.1",
     "slugify": "^1.6.6",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "swiper": "^7.4.1",
     "swiper-react": "^1.0.0",
     "ws": "^8.16.0"

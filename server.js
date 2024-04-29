@@ -15,6 +15,8 @@ import mRoutes from "./routes/mRoutes.js";
 import Patient from "./models/PatientReg.js";
 import bodyParser from 'body-parser';
 import multer from 'multer';
+import swaggerjsdoc from 'swagger-jsdoc';
+import swaggerui from 'swagger-ui-express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -40,7 +42,7 @@ const accessLogStream = rfs.createStream('access.log', {
   interval: '1h',
   path: logDirectory
 });
- 
+
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(json());
 app.use(morgan('combined', { stream: accessLogStream })); // Use combined format for logging
@@ -52,10 +54,46 @@ app.use("/api/auth", authRouter);
 app.use("/api/product", productRoutes);
 app.use("/api/lab", labRoutes)
 app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
-app.use("/api/blog",mRoutes);
+app.use("/api/blog", mRoutes);
 
 
-// ---------------------------------------------
+const options = {
+  definition: {
+    openapi: "3.0.1",
+    info: {
+      title: "HealthNexus",
+      version: "2.0.0",
+      description: "API application made with express and documented with swaggerAPI"
+    },
+    servers: [
+      {
+        url: "http://localhost:8081/",
+      },
+    ],
+    components: {
+      securitySchemes: {
+        BearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
+        }
+      }
+    },
+    security: [{
+      bearerAuth: []
+    }]
+  },
+  apis: ['./routes/*.js'],
+};
+
+const specs = swaggerjsdoc(options);
+
+app.use(
+  "/api-docs",
+  swaggerui.serve,
+  swaggerui.setup(specs)
+)
+
 
 
 
@@ -104,10 +142,6 @@ app.post('/register', upload.single('profileImage'), async (req, res) => {
   }
 });
 
-
-
-
-// ---------------------------------------------
 
 
 // Requests
@@ -261,7 +295,7 @@ app.get('/doctorres', async (req, res) => {
 
 
 app.post('/login', async (req, res) => {
-  const {email} = req.body;
+  const { email } = req.body;
   const user = await User.findOne({ email });
   console.log(user)
   if (user) {
