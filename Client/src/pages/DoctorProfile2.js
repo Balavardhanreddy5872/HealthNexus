@@ -60,14 +60,22 @@ const Doctorlogin = ({ userId }) => {
                                         <div className="text-content1">
                                             <div className="info-line">
                                                 <p><strong>Name:</strong>{userInfo.name}</p>
+                                            </div>
+                                            <div className="info-line">
                                                 <p><strong>Email:</strong> {userInfo.email}</p>
                                             </div>
                                             <div className="info-line">
                                                 <p><strong>Specialization:</strong> {userInfo.specialization}</p>
+                                                
+                                            </div>
+                                            <div className="info-line">
                                                 <p><strong>Phone Number:</strong> {userInfo.phoneNumber}</p>
                                             </div>
                                             <div className="info-line">
                                                 <p><strong>Address:</strong> {userInfo.address}</p>
+                                            </div>
+                                            <div className="info-line">
+                                               
                                                 <p><strong>Experience:</strong> {userInfo.experience}</p>
                                             </div>
                                         </div>
