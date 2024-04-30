@@ -89,7 +89,6 @@ export const getProductController = async (req, res) => {
     console.log("Searching in redis cache");
     const cachedProducts = await client.get('products');
     if (cachedProducts) {
-      // If data is available in cache, parse and send it directly
       console.log("Found in cache");
       const parsedProducts = JSON.parse(cachedProducts);
       res.status(200).send({
@@ -99,7 +98,6 @@ export const getProductController = async (req, res) => {
         products: parsedProducts,
       });
     } else {
-      // If data is not available in cache, fetch it from the database
       console.log("Products not found in cache");
       const products = await productModel
         .find({})
