@@ -4,6 +4,7 @@ import JWT from "jsonwebtoken";
 import orderModel from '../models/orderModel.js'
 import UserModels from "../models/UserModels.js";
 
+
 export const registerController = async (req, res) => {
     try {
         const { name, email, password, phone, address } = req.body
@@ -187,10 +188,10 @@ export const updateProfileController = async (req, res) => {
 export const getOrdersController = async (req, res) => {
     try {
         const orders = await orderModel
-            .find({ buyer: req.user._id })
+            .find({buyer: req.user_id})
             .populate("products", "-photo")
             .populate("buyer", "name");
-        res.json(orders);
+        res.json(orders.products);
     } catch (error) {
         console.log(error);
         res.status(500).send({

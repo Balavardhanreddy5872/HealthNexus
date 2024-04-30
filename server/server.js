@@ -19,8 +19,8 @@ import swaggerjsdoc from 'swagger-jsdoc';
 import swaggerui from 'swagger-ui-express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
-
 config();
+
 
 //Connection to database 
 const dbUrl = 'mongodb://0.0.0.0:27017/shopping'
@@ -76,12 +76,10 @@ const options = {
           type: "http",
           scheme: "bearer",
           bearerFormat: "JWT",
+          value : "Bearer <JWT token here>"
         }
       }
     },
-    security: [{
-      bearerAuth: []
-    }]
   },
   apis: ['./routes/*.js'],
 };

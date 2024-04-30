@@ -555,8 +555,14 @@ const Medicine = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:8081/api/product/get-medicine');
-      let sortedProducts = data.products;
+      const { data } = await axios.get('http://localhost:8081/api/product/get-medicine', {
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        }
+      });
+            let sortedProducts = data.products;
 
       // Filter products based on selected letter
       if (selectedLetter) {

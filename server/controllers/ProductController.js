@@ -4,7 +4,7 @@ import fs from "fs";
 import slugify from "slugify";
 import braintree from "braintree";
 import dotenv from "dotenv";
-
+import { client } from "../lib/lib.js";
 dotenv.config();
 
 //payment gateway
@@ -61,29 +61,71 @@ export const addProductController = async (req, res) => {
   }
 }
 
-
 // get all products "Medicnes Page "
+// export const getProductController = async (req, res) => {
+//   try {
+//     const products = await productModel
+//       .find({})
+//       .select("-photo")
+//       .sort({ createdAt: -1 });
+//     res.status(200).send({
+//       success: true,
+//       counTotal: products.length,
+//       message: "All Products ",
+//       products,
+//     });
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).send({
+//       success: false,
+//       message: "Erorr in getting products",
+//       error: error.message,
+//     });
+//   }
+// };
+
 export const getProductController = async (req, res) => {
   try {
-    const products = await productModel
-      .find({})
-      .select("-photo")
-      .sort({ createdAt: -1 });
-    res.status(200).send({
-      success: true,
-      counTotal: products.length,
-      message: "All Products ",
-      products,
-    });
+    console.log("Searching in redis cache");
+    const cachedProducts = await client.get('products');
+    if (cachedProducts) {
+      // If data is available in cache, parse and send it directly
+      console.log("Found in cache");
+      const parsedProducts = JSON.parse(cachedProducts);
+      res.status(200).send({
+        success: true,
+        countTotal: parsedProducts.length,
+        message: "All Products (from cache)",
+        products: parsedProducts,
+      });
+    } else {
+      // If data is not available in cache, fetch it from the database
+      console.log("Products not found in cache");
+      const products = await productModel
+        .find({})
+        .select("-photo")
+        .sort({ createdAt: -1 });
+
+      // Cache the fetched data for future requests
+      await client.set('products', JSON.stringify(products));
+
+      res.status(200).send({
+        success: true,
+        countTotal: products.length,
+        message: "All Products",
+        products,
+      });
+    }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     res.status(500).send({
       success: false,
-      message: "Erorr in getting products",
+      message: "Error in getting products",
       error: error.message,
     });
   }
 };
+
 
 // get only one medicine "Search Bar" 
 export const getSingleProductController = async (req, res) => {
