@@ -17,7 +17,7 @@ jobs:
       - name: Install Node.js and dependencies
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 20.x
           cache: 'npm'
 
       - name: Install dependencies
@@ -34,7 +34,7 @@ jobs:
       - name: Install Node.js and dependencies
         uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 20.x
           cache: 'npm'
 
       - name: Install dependencies
@@ -49,4 +49,7 @@ jobs:
   # deploy:
   #   needs: test
   #   runs-on: ubuntu-latest
-  #   # Add deployment steps here, like deploying to a server or a cloud platform
+
+  #   steps:
+  #     - name: Deployment steps
+        # Add deployment steps here, like deploying to a server or a cloud platform
