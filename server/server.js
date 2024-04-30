@@ -21,7 +21,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 config();
 
-// hello
+
 //Connection to database 
 const dbUrl = 'mongodb://0.0.0.0:27017/shopping'
 mongoose.Promise = global.Promise;
