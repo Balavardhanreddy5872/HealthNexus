@@ -3,6 +3,7 @@ import User from '../models/UserModels.js'
 
 // Verifying the token 
 export const requireSignIn = async (req, res, next) => {
+  // const token = req.headers.authorization.split(' ')[1];
     try {
         const decode = JWT.verify(
             req.headers.authorization,

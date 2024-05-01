@@ -70,7 +70,6 @@ export const logincontroller = async (req, res) => {
     try {
         const { email, password } = req.body
 
-        // validations
         if (!email || !password) {
             return res.status(404).send({
                 success: false,
@@ -78,7 +77,6 @@ export const logincontroller = async (req, res) => {
             })
         }
 
-        //check user
         const user = await User.findOne({ email })
         if (!user) {
             return res.status(404).send({
@@ -89,11 +87,10 @@ export const logincontroller = async (req, res) => {
         const match = await comaparePassword(password, user.password)
         if (!match) {
             return res.status(200).send({
-                sucess: false,
+                success: false, 
                 message: "Invalid password"
             });
         }
-        // token 
         const token = await JWT.sign({ _id: user._id }, process.env.JWT_SECRET, {
             expiresIn: "7d",
         })
@@ -105,7 +102,7 @@ export const logincontroller = async (req, res) => {
                 name: user.name,
                 email: user.email,
                 phone: user.phone,
-                adddress: user.address,
+                address: user.address, 
                 role: user.role
             },
             token,
@@ -120,6 +117,7 @@ export const logincontroller = async (req, res) => {
     }
 
 }
+
 
 // verify user and Admin via middle ware 
 //test controller

@@ -12,4 +12,4 @@ COPY .env ./
 
 EXPOSE 8081
 
-CMD ["nodemon", "server.js"]
+CMD ["node", "server.js"]

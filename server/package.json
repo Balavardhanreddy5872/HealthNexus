@@ -1,14 +1,18 @@
 {
+  "type": "module",
   "name": "e-commers",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm run start --prefix ./client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "keywords": [],
   "author": "BVR",
@@ -21,6 +25,7 @@
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.2",
     "braintree": "^3.19.0",
+    "chai": "^5.1.0",
     "chart.js": "^4.4.1",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
@@ -50,5 +55,9 @@
     "swiper-react": "^1.0.0",
     "util": "^0.12.5",
     "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }

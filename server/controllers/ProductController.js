@@ -104,7 +104,6 @@ export const getProductController = async (req, res) => {
         .select("-photo")
         .sort({ createdAt: -1 });
 
-      // Cache the fetched data for future requests
       await client.set('products', JSON.stringify(products));
 
       res.status(200).send({

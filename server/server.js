@@ -114,7 +114,7 @@ app.post('/api/upload', upload.single('image'), (req, res) => {
 });
 
 
-app.post('/register', upload.single('profileImage'), async (req, res) => {
+app.post('/register2', upload.single('profileImage'), async (req, res) => {
   try {
     const { name,
       email,
@@ -369,3 +369,5 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+export default app;
