@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha server/api.test.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,5 @@
     "mocha": "^10.4.0",
     "chai": "^4.3.4",
     "supertest": "^6.1.3"
-  },
-  "directories": {
-    "test": "server/tests"
-  },
-  "mocha": {
-    "spec": "server/tests//*.test.js"
-}
+  }
 }
