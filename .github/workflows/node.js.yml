@@ -50,7 +50,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '14'
-          node-version: '14'
 
       - name: Run tests
         run: npm test
