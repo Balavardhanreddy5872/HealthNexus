@@ -1,23 +1,63 @@
+
+
 {
-  "name": "healthnexus",
+  "type": "module",
+  "name": "e-commers",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-      "test": "./node_modules/.bin/mocha server/api.test.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "mocha server/api.test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Balavardhanreddy5872/HealthNexus.git"
-  },
-  "author": "",
+  "keywords": [],
+  "author": "BVR",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Balavardhanreddy5872/HealthNexus/issues"
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "antd": "^5.11.5",
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.2",
+    "braintree": "^3.19.0",
+    "chart.js": "^4.4.1",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-formidable": "^1.2.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^3.0.1",
+    "react-bootstrap": "^2.10.1",
+    "react-bootstrap-icons": "^1.11.3",
+    "react-id-swiper": "^4.0.0",
+    "react-router-dom": "^6.20.1",
+    "react-scripts": "^3.0.1",
+    "redis": "^3.1.2",
+    "rotating-file-stream": "^3.2.1",
+    "slugify": "^1.6.6",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "swiper": "^7.4.1",
+    "swiper-react": "^1.0.0",
+    "util": "^0.12.5",
+    "ws": "^8.16.0"
   },
-  "homepage": "https://github.com/Balavardhanreddy5872/HealthNexus#readme",
   "devDependencies": {
     "chai": "^4.3.4",
-    "mocha": "^9.2.2"
+    "jest": "^29.7.0",
+    "mocha": "^9.1.3",
+    "supertest": "^7.0.0"
   }
 }
