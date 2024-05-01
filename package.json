@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Balavardhanreddy5872/HealthNexus/issues"
   },
-  "homepage": "https://github.com/Balavardhanreddy5872/HealthNexus#readme"
+  "homepage": "https://github.com/Balavardhanreddy5872/HealthNexus#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
 }
