@@ -14,8 +14,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set execute permissions for test file
-        run: chmod +x server/api.test.js
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Install Node.js and dependencies
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -28,10 +49,7 @@ jobs:
       - name: Install Node.js and dependencies
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
-
-      - name: Install dependencies
-        run: npm install
+          node-version: '14'
 
       - name: Run tests
         run: npm test
@@ -42,4 +60,3 @@ jobs:
         # 
 
       
-
