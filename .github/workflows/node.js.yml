@@ -52,7 +52,7 @@ jobs:
           node-version: '14'
 
       - name: Run tests
-        run: npm test
+        run: npm run mocha
 
       - name: Print success message
         run: echo "Tests passed. Everything is working fine!"
