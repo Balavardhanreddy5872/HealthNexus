@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha server/api.test.js"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Balavardhanreddy5872/HealthNexus.git"
