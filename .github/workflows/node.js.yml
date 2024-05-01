@@ -2,8 +2,6 @@ name: CI/CD Pipeline
 
 on:
   push:
-    paths:
-    - 'server/**'
     branches: [main]
   pull_request:
     branches: [main]
