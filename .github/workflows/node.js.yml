@@ -26,6 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '14'
+          node-version: '14'
 
       - name: Install dependencies
         run: npm install
@@ -50,8 +51,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '14'
+          node-version: '14'
 
       - name: Run tests
+        run: npm test
         run: npm test
 
       - name: Print success message
