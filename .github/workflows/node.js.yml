@@ -41,4 +41,4 @@ jobs:
         npm test
         pm2 stop server
       
-      working-directory: server
+      working-directory: server
