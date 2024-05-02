@@ -45,7 +45,7 @@ const accessLogStream = rfs.createStream('access.log', {
   path: logDirectory
 });
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' } ));
+app.use(cors());
 
 app.use(json());
 app.use(morgan('combined', { stream: accessLogStream })); // Use combined format for logging
