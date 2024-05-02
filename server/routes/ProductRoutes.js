@@ -2,6 +2,7 @@ import express from "express"
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 import formidable from "express-formidable";
 import { addProductController, getProductController, getSingleProductController, productPhotoController, updateProductController, deleteProductController, searchProductcontroller, brainTreePaymentController, braintreeTokenController, getTotalProductCountController } from "../controllers/ProductController.js";
+import ProductModel from "../models/ProductModel.js";
 
 const router = express.Router();
 
@@ -176,7 +177,25 @@ router.get("/get-medicine", getProductController);
  *         description: Internal server error
  */
 
-router.get("/get-medicine/:slug", getSingleProductController);
+router.get("/get-medicine/:slug", async (req, res) => {
+    try {
+      const product = await ProductModel
+        .findOne({ slug: req.params.slug })
+        .select("-photo")
+      res.status(200).send({
+        success: true,
+        message: "Single Product Fetched",
+        product,
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({
+        success: false,
+        message: "Eror while getitng single product",
+        error,
+      });
+    }
+  });
 
 
 router.get("/medicine-photo/:pid", productPhotoController);
