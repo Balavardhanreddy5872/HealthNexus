@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import AdminMenu from '../../components/Layout/AdminMenu';
 import axios from 'axios';
 import Layout2 from '../../components/Layout/Layout2';
+import AdminMenu from '../../components/Layout/AdminMenu';
 
 const UserIcon = () => <i className="fa fa-user" style={{ marginRight: '5px' }}></i>;
 const EmailIcon = () =><i className="fa-regular fa-envelope" style={{ marginRight: '5px' }}></i>;
@@ -63,7 +63,6 @@ const Chat = () => {
                                 </div>
                             ))}
                         </div>
-                        {/* Form to send message to all users */}
                         <div style={{ marginTop: '20px' }}>
                             <textarea
                                 className="form-control"
@@ -71,8 +70,9 @@ const Chat = () => {
                                 placeholder="Type your message here"
                                 value={newMessage}
                                 onChange={e => setNewMessage(e.target.value)}
+                                style={{background:"#6b76ff",borderRadius:"15px"}}
                             ></textarea>
-                            <button className="btn btn-primary mt-2" onClick={handleSendMessage}>Send Message</button>
+                            <button className='btn btn-success' style={{margin:"15px"}} onClick={handleSendMessage}>Send Message</button>
                         </div>
                     </div>
                 </div>

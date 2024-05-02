@@ -52,8 +52,8 @@ const Chat = () => {
                                 <div key={message._id} style={{ border: '1px solid #ccc', borderRadius: '5px', boxShadow: '0 0 5px rgba(0, 0, 0, 0.1)' }}>
                                     <div style={{ padding: '20px' }}>
                                         <div>
-                                            {/* <UserIcon /> : <b>{message.sender.name}</b> <br/> */}
-                                            {/* <EmailIcon/> : <b>{message.sender.email}</b> */}
+                                            <UserIcon /> : <b>{message.sender.name}</b> <br/>
+                                            <EmailIcon/> : <b>{message.sender.email}</b>
                                         </div>
                                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
                                             <MessageIcon/>

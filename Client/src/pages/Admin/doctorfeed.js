@@ -95,11 +95,11 @@ const AdminOrders = () => {
             <AdminMenu />
           </div>
 
-          <div className="col-md-9">
+          <div className="col-md-9" style={{background:"whitesmoke",borderRadius:"10px"}}>
             <div className="user-account-page">
               <div className="user-appointments-container">
                 <h2>Doctors</h2>
-                <div>
+                <div style={{justifyContent:"space-around",display:"flex"}}>
                   <button onClick={() => handleShowDoctors("all")}>
                     All Doctors
                   </button>

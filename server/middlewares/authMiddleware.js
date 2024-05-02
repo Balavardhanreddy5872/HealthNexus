@@ -7,7 +7,7 @@ export const requireSignIn = async (req, res, next) => {
   const token2 = req.headers.authorization
     try {
         const decode = JWT.verify(
-            token,
+            token2,
             process.env.JWT_SECRET
         );
         req.user = decode;

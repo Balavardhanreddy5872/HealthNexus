@@ -125,6 +125,103 @@ const User = () => {
 
   return (
     <Layout2>
+       <style>
+        {`
+          .container {
+            padding: 20px;
+            background: #f3f7fb;
+          }
+
+          .row {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .card {
+            width: calc(48% - 20px); 
+            margin: 10px;
+            position: relative;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            background: #fff;
+          }
+
+          .card h5 {
+            margin-bottom: 10px;
+            font-size: 18px;
+          }
+
+          .card p {
+            margin-bottom: 5px;
+            color: #777;
+          }
+
+          .message-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #32aeb1;
+            font-size: 24px;
+            cursor: pointer;
+          }
+
+          .message-form-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            height: 40%;
+          }
+
+          .message-form-container button.close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+          }
+
+          .message-form-container h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+          }
+
+          .message-form-container form textarea {
+            width: 100%;
+            min-height: 100px;
+            margin-bottom: 10px;
+          }
+
+          .message-form-container form button {
+            padding: 10px 20px;
+            background: #32aeb1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+          }
+        `}
+      </style>
       <div style={{ padding: '20px' }}>
         <div className="row">
           <div className="col-md-3">

@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 const AdminMenu = () => {
   const style = {
     height: 'calc(100vh - 87px)',
-    width: '360px',
+    width: '300px',
     position: 'fixed',
     zIndex: '1',
     top: '85px',
     left: '0',
-    backgroundColor: 'black',
+    backgroundColor: 'gray',
     color: 'white',
     overflowX: 'hidden',
     paddingTop: '30px',
@@ -19,7 +19,9 @@ const AdminMenu = () => {
     alignItems: 'center',
     color:'white',
     justifyContent: 'center',
-    height: 'calc((100vh - 100px) / 7)', // Adjust based on the number of links
+    height: 'calc((100vh - 100px) / 7)',
+    
+     // Adjust based on the number of links
   };
   return (
     <>
