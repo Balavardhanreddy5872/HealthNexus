@@ -8,6 +8,7 @@ const AdminMenu = () => {
     zIndex: '1',
     top: '85px',
     left: '0',
+    right:'0',
     backgroundColor: 'gray',
     color: 'white',
     overflowX: 'hidden',
