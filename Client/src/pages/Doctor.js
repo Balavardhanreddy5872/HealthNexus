@@ -123,7 +123,7 @@ const Doctor = () => {
         <br />
         <hr />
         <br />
-        <div className="row" style={{maxWidth:'98%'}}>
+        <div className="row" style={{maxWidth:'98%', display:'flex'}}>
         {filteredAppointments.length > 0 ? (
           filteredAppointments
         ) : (
