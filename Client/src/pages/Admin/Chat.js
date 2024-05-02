@@ -18,7 +18,7 @@ const Chat = () => {
 
     const fetchMessages = async () => {
         try {
-            const response = await axios.get('http://localhost:8081/api/blog/mymsg');
+            const response = await axios.get('https://healthnexus.onrender.com/api/blog/mymsg');
             setMessages(response.data.messages); // Assuming messages are in response.data.messages
         } catch (error) {
             console.error('Error fetching messages:', error);
@@ -29,7 +29,7 @@ const Chat = () => {
         try {
             console.log(newMessage);
             // Send the new message to all users
-            await axios.post('http://localhost:8081/api/blog/message', { message: newMessage });
+            await axios.post('https://healthnexus.onrender.com/api/blog/message', { message: newMessage });
             // Clear the new message input
             setNewMessage('');
         } catch (error) {

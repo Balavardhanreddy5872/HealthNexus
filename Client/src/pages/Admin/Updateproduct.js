@@ -20,7 +20,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8081/api/product/get-medicine/${params.slug}`
+        `https://healthnexus.onrender.com/api/product/get-medicine/${params.slug}`
       );
       setName(data.product.name);
       setId(data.product._id);
@@ -49,7 +49,7 @@ const UpdateProduct = () => {
       productData.append("quantity", quantity);
       photo && productData.append("photo", photo);
       const { data } = axios.put(
-        `http://localhost:8081/api/product/update-product/${id}`,
+        `https://healthnexus.onrender.com/api/product/update-product/${id}`,
         productData
       );
       if (data?.success) {
@@ -70,7 +70,7 @@ const UpdateProduct = () => {
       let answer = window.prompt("Are You Sure want to delete this product ? ");
       if (!answer) return;
       const { data } = await axios.delete(
-        `http://localhost:8081/api/product/delete-product/${id}`
+        `https://healthnexus.onrender.com/api/product/delete-product/${id}`
       );
       toast.success("Product Deleted Succfully");
       navigate("/dashboard/admin/products");
@@ -114,7 +114,7 @@ const UpdateProduct = () => {
                 ) : (
                   <div className="text-center">
                     <img
-                      src={`http://localhost:8081/api/product/medicine-photo/${id}`}
+                      src={`https://healthnexus.onrender.com/api/product/medicine-photo/${id}`}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"

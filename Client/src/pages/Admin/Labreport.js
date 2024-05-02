@@ -21,7 +21,7 @@ const Labreport = () => {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8081/api/lab/all-lab");
+      const { data } = await axios.get("https://healthnexus.onrender.com/api/lab/all-lab");
       setOrders(data.lab);
     } catch (error) {
       console.log(error);
@@ -37,7 +37,7 @@ const Labreport = () => {
 
   const handleChange = async (orderId, value) => {
     try {
-      const { data } = await axios.put(`http://localhost:8081/api/lab/lab-status/${orderId}`, {
+      const { data } = await axios.put(`https://healthnexus.onrender.com/api/lab/lab-status/${orderId}`, {
         status: value,
       });
       getOrders();

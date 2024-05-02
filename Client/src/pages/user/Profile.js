@@ -27,7 +27,7 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put(`http://localhost:8081/api/auth/profile`, {
+      const { data } = await axios.put(`https://healthnexus.onrender.com/api/auth/profile`, {
         name,
         email,
         password,

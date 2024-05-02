@@ -20,7 +20,7 @@ const LabTests = () => {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8081/api/lab/formstatus");
+      const { data } = await axios.get("https://healthnexus.onrender.com/api/lab/formstatus");
       setLab(data.orders);
     } catch (error) {
       console.log(error);

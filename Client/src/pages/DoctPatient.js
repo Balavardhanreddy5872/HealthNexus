@@ -17,7 +17,7 @@ const Doctor = () => {
     useEffect(() => {
         const fetchall = async () => {
             try {
-                const response = await fetch("http://localhost:8081/doctorres", {
+                const response = await fetch("https://healthnexus.onrender.com/doctorres", {
                     credentials: "include",
                 });
                 if (!response.ok) {
@@ -110,7 +110,7 @@ const Doctor = () => {
 
     try {
       if (validateForm()) {
-        const response = await fetch("http://localhost:8081/patientdetails", {
+        const response = await fetch("https://healthnexus.onrender.com/patientdetails", {
           method: "POST",
           body: JSON.stringify({
             patientName,

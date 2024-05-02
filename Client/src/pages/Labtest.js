@@ -100,7 +100,7 @@ const Labtest = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const res = await axios.post(`http://localhost:8081/api/lab/report`, {
+      const res = await axios.post(`https://healthnexus.onrender.com/api/lab/report`, {
         name: inputFields.name,
         number: inputFields.number,
         pincode: inputFields.pincode,

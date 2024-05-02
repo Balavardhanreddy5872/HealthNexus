@@ -12,7 +12,7 @@ const Doctorsapp = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8081/UserPat3', {
+        const response = await fetch('https://healthnexus.onrender.com/UserPat3', {
           credentials: 'include',
         });
         if (!response.ok) {

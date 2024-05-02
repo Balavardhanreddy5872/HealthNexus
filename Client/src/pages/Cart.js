@@ -53,7 +53,7 @@ const Cart = () => {
 
   const getToken = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8081/api/product/braintree/token");
+      const { data } = await axios.get("https://healthnexus.onrender.com/api/product/braintree/token");
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -68,7 +68,7 @@ const Cart = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post("http://localhost:8081/api/product/braintree/payment", {
+      const { data } = await axios.post("https://healthnexus.onrender.com/api/product/braintree/payment", {
         nonce,
         cart,
       });
@@ -120,7 +120,7 @@ const Cart = () => {
                       <tr key={p._id}>
                         <td>
                           <img
-                            src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+                            src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
                             alt={p.name}
                             width="100px"
                             height="50px"

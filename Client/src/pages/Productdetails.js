@@ -21,7 +21,7 @@ const Productdetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8081/api/product/get-medicine/${params.slug}`
+        `https://healthnexus.onrender.com/api/product/get-medicine/${params.slug}`
       );
       setProduct(data?.product);
     } catch (error) {
@@ -36,7 +36,7 @@ const Productdetails = () => {
         <div style={{display:"flex",justifyContent:"center",backgroundColor:'skyblue' ,border:'2px solid grey' , borderRadius: '9px'}}>
           <div style={{marginLeft:"100px",marginTop:"100px"}}>
             <img
-              src={`http://localhost:8081/api/product/medicine-photo/${product._id}`}
+              src={`https://healthnexus.onrender.com/api/product/medicine-photo/${product._id}`}
               className="img-fluid rounded"
               alt={product}
               style={{boxShadow:'2px 2px 2px 2px grey',height:'50vh' , width:'50vw'}}

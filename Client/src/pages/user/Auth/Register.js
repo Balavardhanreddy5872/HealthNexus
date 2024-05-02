@@ -17,7 +17,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post(`http://localhost:8081/api/auth/register`, {
+            const res = await axios.post(`https://healthnexus.onrender.com/api/auth/register`, {
                 name,
                 email,
                 password,

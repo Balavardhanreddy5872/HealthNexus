@@ -12,7 +12,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const { data } = await axios.get('http://localhost:8081/api/product/get-medicine');
+//         const { data } = await axios.get('https://healthnexus.onrender.com/api/product/get-medicine');
 //         setProducts(data.products);
 //       } catch (error) {
 //         console.log(error);
@@ -48,7 +48,7 @@
 //             <div key={p._id} onClick={() => navigate(`/productdetails/${p.slug}`)} style={{ cursor: 'pointer' }}>
 //               <div className="card m-2" style={{ width: '20rem', height: '65vh' }}>
 //                 <img
-//                   src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+//                   src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
 //                   className="card-img-top"
 //                   height="200px"
 //                   alt={p.name}
@@ -95,7 +95,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const { data } = await axios.get('http://localhost:8081/api/product/get-medicine');
+//         const { data } = await axios.get('https://healthnexus.onrender.com/api/product/get-medicine');
 //         setProducts(data.products);
 //       } catch (error) {
 //         console.log(error);
@@ -138,7 +138,7 @@
 //           <div key={p._id} onClick={() => navigate(`/productdetails/${p.slug}`)} style={{ cursor: 'pointer' }}>
 //             <div className="card m-2" style={{ width: '20rem', height: '65vh' }}>
 //               <img
-//                 src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+//                 src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
 //                 className="card-img-top"
 //                 height="200px"
 //                 alt={p.name}
@@ -190,7 +190,7 @@ const Homeswiper = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8081/api/product/get-medicine');
+        const { data } = await axios.get('https://healthnexus.onrender.com/api/product/get-medicine');
         setProducts(data.products);
       } catch (error) {
         console.log(error);
@@ -238,7 +238,7 @@ const Homeswiper = () => {
           <SwiperSlide key={p._id} style={{width: '15rem'}}>
               <div onClick={() => navigate(`/productdetails/${p.slug}`)} className="card" style={{ cursor: 'pointer', width: '220px'}}>
                 <img
-                  src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+                  src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
                   className="card-img-top"
                   height="150px"
                   padding="25px"

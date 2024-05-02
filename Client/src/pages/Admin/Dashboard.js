@@ -25,10 +25,10 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Fetch order count
-    axios.get('http://localhost:8081/api/auth/ordercnt')
+    axios.get('https://healthnexus.onrender.com/api/auth/ordercnt')
       .then(response => setOrderCount(response.data.totalCount))
       .catch(error => console.error('Error fetching order count', error));
-    axios.get('http://localhost:8081/api/lab/labcnt')
+    axios.get('https://healthnexus.onrender.com/api/lab/labcnt')
       .then(response => setLabCount(response.data.totalCount))
       .catch(error => console.error('Error fetching order count', error));
 
@@ -50,7 +50,7 @@ const Dashboard = () => {
   const handleImageUpload = () => {
     const formData = new FormData();
     formData.append('image', image);
-    axios.post('http://localhost:8081/api/upload', formData)
+    axios.post('https://healthnexus.onrender.com/api/upload', formData)
       .then(response => {
         console.log('Image uploaded successfully', response.data);
         // handle any further action, like showing the uploaded image, etc.

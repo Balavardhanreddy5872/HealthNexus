@@ -25,7 +25,7 @@ const handleCreate = async (e) => {
     productData.append("price", price);
     productData.append("quantity", quantity);
     productData.append("photo", photo);
-    const { data } = await axios.post(`http://localhost:8081/api/product/add-medicine`, productData);
+    const { data } = await axios.post(`https://healthnexus.onrender.com/api/product/add-medicine`, productData);
       if (data?.success) {
         toast.error(data?.message);
       } else {

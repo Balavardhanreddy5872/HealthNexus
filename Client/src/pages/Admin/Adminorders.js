@@ -22,7 +22,7 @@ const AdminOrders = () => {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8081/api/auth/all-orders");
+      const { data } = await axios.get("https://healthnexus.onrender.com/api/auth/all-orders");
       // Sort orders by date from present to past
       const sortedOrders = data.sort((a, b) => moment(b.createAt).valueOf() - moment(a.createAt).valueOf());
       setOrders(sortedOrders);
@@ -37,7 +37,7 @@ const AdminOrders = () => {
 
   const handleChange = async (orderId, value) => {
     try {
-      const { data } = await axios.put(`http://localhost:8081/api/auth/order-status/${orderId}`, {
+      const { data } = await axios.put(`https://healthnexus.onrender.com/api/auth/order-status/${orderId}`, {
         status: value,
       });
       getOrders();
@@ -123,7 +123,7 @@ const AdminOrders = () => {
                     <div className="row mb-2 p-3 card flex-row" key={j}>
                       <div className="col-md-4">
                         <img
-                          src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+                          src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
                           className="card-img-top"
                           alt={p.name}
                           width="150px"

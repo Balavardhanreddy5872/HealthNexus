@@ -10,7 +10,7 @@ export default function AdminRoute() {
 
   useEffect(() => {
     const authCheck = async () => {
-      const res = await axios.get("http://localhost:8081/api/auth/admin-auth");
+      const res = await axios.get("https://healthnexus.onrender.com/api/auth/admin-auth");
       if (res.data.ok) {
         setOk(true);
       } else {

@@ -10,7 +10,7 @@ const Doctorlogin = ({ userId }) => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`http://localhost:8081/doctprofile`, {
+                const response = await fetch(`https://healthnexus.onrender.com/doctprofile`, {
                     method: 'POST',
                     body: JSON.stringify({
                         id: localStorage.getItem('id'),
@@ -51,7 +51,7 @@ const Doctorlogin = ({ userId }) => {
                                         <div className="profile-image1" >
                                             {userInfo.profileImage && (
                                                 <img
-                                                    src={`http://localhost:8081/uploads/${userInfo.profileImage}`}
+                                                    src={`https://healthnexus.onrender.com/uploads/${userInfo.profileImage}`}
                                                     alt=""
                                                     className="img-fluid"
                                                 />

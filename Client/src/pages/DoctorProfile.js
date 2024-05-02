@@ -22,7 +22,7 @@ const Doctorlogin = ({ userId }) => {
 
     const handleAcceptAppointment = async (id, prescription) => {
         try {
-            const response = await fetch(`http://localhost:8081/updateAppointmentStatus`, {
+            const response = await fetch(`https://healthnexus.onrender.com/updateAppointmentStatus`, {
                 method: 'POST',
                 body: JSON.stringify({
                     appointmentId: id,
@@ -55,7 +55,7 @@ const Doctorlogin = ({ userId }) => {
 
     const handleRejectAppointment = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8081/updateAppointmentStatus`, {
+            const response = await fetch(`https://healthnexus.onrender.com/updateAppointmentStatus`, {
                 method: 'POST',
                 body: JSON.stringify({
                     appointmentId: id,
@@ -84,7 +84,7 @@ const Doctorlogin = ({ userId }) => {
     useEffect(() => {
         const fetchall = async () => {
             try {
-                const response = await fetch("http://localhost:8081/doctordet", {
+                const response = await fetch("https://healthnexus.onrender.com/doctordet", {
                     credentials: "include",
                 });
                 if (!response.ok) {
@@ -103,7 +103,7 @@ const Doctorlogin = ({ userId }) => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`http://localhost:8081/doctprofile`, {
+                const response = await fetch(`https://healthnexus.onrender.com/doctprofile`, {
                     method: 'POST',
                     body: JSON.stringify({
                         id: localStorage.getItem('id'),
@@ -122,7 +122,7 @@ const Doctorlogin = ({ userId }) => {
     useEffect(() => {
         const fetchall = async () => {
             try {
-                const response = await fetch("http://localhost:8081/UserPat2", {
+                const response = await fetch("https://healthnexus.onrender.com/UserPat2", {
                     credentials: "include",
                     headers: {
                         "id": localStorage.getItem('id'),

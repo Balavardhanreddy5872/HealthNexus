@@ -31,7 +31,7 @@ const Doctor = () => {
 
   // useEffect(()=>{
   //   const response = await fetch(
-  //     "http://localhost:8081/login",
+  //     "https://healthnexus.onrender.com/login",
   //     {
   //       method: "POST",
   //       body: JSON.stringify({ email, password }),
@@ -67,7 +67,7 @@ const Doctor = () => {
   const handleClick = async () => {
     try {
       const response = await fetch(
-          "http://localhost:8081/login",
+          "https://healthnexus.onrender.com/login",
           {
             method: "POST",
             body: JSON.stringify({ email: emialll }),

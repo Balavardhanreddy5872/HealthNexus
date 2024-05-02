@@ -10,7 +10,7 @@ const SearchInput = () => {
         e.preventDefault();
         try {
             const { data } = await axios.get(
-                `http://localhost:8081/api/product/search/${values.keyword}`
+                `https://healthnexus.onrender.com/api/product/search/${values.keyword}`
             );
             setValues({ ...values, results: data });
             navigate("/search");

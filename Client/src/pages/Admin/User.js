@@ -106,7 +106,7 @@ const User = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/api/auth/allusers');
+      const response = await axios.get('https://healthnexus.onrender.com/api/auth/allusers');
       setUsers(response.data.user);
     } catch (error) {
       console.error('Error fetching users:', error);
@@ -117,7 +117,7 @@ const User = () => {
     if (!selectedUserId) return;
 
     try {
-      await axios.post(`http://localhost:8081/api/blog/message/${selectedUserId}`, { message });
+      await axios.post(`https://healthnexus.onrender.com/api/blog/message/${selectedUserId}`, { message });
     } catch (error) {
       throw new Error('Failed to send message');
     }

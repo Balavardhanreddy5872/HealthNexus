@@ -32,7 +32,7 @@ const Orders = () => {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8081/api/auth/orders"
+        "https://healthnexus.onrender.com/api/auth/orders"
       );
       setOrders(data);
     } catch (error) {
@@ -125,7 +125,7 @@ const Orders = () => {
                           >
                             <div className="col-md-4">
                               <img
-                                src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+                                src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
                                 className="card-img-top"
                                 alt={p.name}
                                 width="150px"

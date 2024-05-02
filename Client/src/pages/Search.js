@@ -22,7 +22,7 @@ const Search = () => {
             {values?.results.map((p) => (
               <div className="card m-2" style={{ width: '20rem', height: '65vh' }} key={p._id}>
                 <img
-                  src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+                  src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
                   className="card-img-top"
                   height='200px'
                   alt={p.name}

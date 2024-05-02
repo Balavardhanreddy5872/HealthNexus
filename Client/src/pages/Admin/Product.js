@@ -10,7 +10,7 @@ const Products = () => {
   //getall products
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:8081/api/product/get-medicine`);
+      const { data } = await axios.get(`https://healthnexus.onrender.com/api/product/get-medicine`);
       setProducts(data.products);
     } catch (error) {
       console.log(error);
@@ -40,7 +40,7 @@ const Products = () => {
                 >
                   <div className="card m-2" style={{ width: "18rem" }}>
                     <img
-                      src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+                      src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
                       className="card-img-top"
                       alt={p.name}
                     />

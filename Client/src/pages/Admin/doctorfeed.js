@@ -12,7 +12,7 @@ const AdminOrders = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:8081/alldoctors", {
+      const response = await fetch("https://healthnexus.onrender.com/alldoctors", {
         credentials: "include",
       });
       const data = await response.json();
@@ -46,7 +46,7 @@ const AdminOrders = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:8081/updateStatus/${doctorToUpdate._id}`,
+          `https://healthnexus.onrender.com/updateStatus/${doctorToUpdate._id}`,
           {
             method: "PUT",
             headers: {

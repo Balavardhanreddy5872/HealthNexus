@@ -32,17 +32,17 @@ const Admindashboard = () => {
 
   useEffect(() => {
     // Fetch order count
-    axios.get('http://localhost:8081/api/auth/ordercount')
+    axios.get('https://healthnexus.onrender.com/api/auth/ordercount')
       .then(response => setOrderCount(response.data.totalCount))
       .catch(error => console.error('Error fetching order count', error));
 
     // Fetch user count
-    axios.get('http://localhost:8081/api/auth/userscount')
+    axios.get('https://healthnexus.onrender.com/api/auth/userscount')
       .then(response => setUserCount(response.data.totalCount))
       .catch(error => console.error('Error fetching user count', error));
 
     // Fetch product count
-    axios.get('http://localhost:8081/api/product/productcount')
+    axios.get('https://healthnexus.onrender.com/api/product/productcount')
       .then(response => setProductCount(response.data.totalCount))
       .catch(error => console.error('Error fetching product count', error));
   }, []);

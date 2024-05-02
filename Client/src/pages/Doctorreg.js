@@ -170,7 +170,7 @@ const Doctorreg = () => {
                             formData.append('profileImage', profileImage);
 
                             // Send the formData to the server
-                            const response = await fetch('http://localhost:8081/register2', {
+                            const response = await fetch('https://healthnexus.onrender.com/register2', {
                               method: 'POST',
                               body: formData,
                             });
