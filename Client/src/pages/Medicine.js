@@ -555,7 +555,7 @@ const Medicine = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get('http://localhost:8081/api/product/get-medicine', {
+      const { data } = await axios.get('https://healthnexus.onrender.com/api/product/get-medicine', {
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           'Pragma': 'no-cache',
