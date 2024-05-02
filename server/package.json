@@ -9,7 +9,7 @@
     "server": "nodemon server.js",
     "client": "npm run start --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "mocha server/tests/*.test.js"
+    "test": "mocha ./tests/*.test.js --exit"
   },
   "keywords": [],
   "author": "BVR",
