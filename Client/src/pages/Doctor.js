@@ -123,7 +123,7 @@ const Doctor = () => {
         <br />
         <hr />
         <br />
-        <div className="rowdoc">
+        <div className="rowdoc" style={{display:'grid',gridTemplateColumns:'repeat(4, 1fr)'}}>
         {filteredAppointments.length > 0 ? (
           filteredAppointments
         ) : (
