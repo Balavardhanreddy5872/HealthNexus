@@ -1,10 +1,10 @@
 import request from 'supertest';
-import app from '../server.js';
+import app from './server.js';
 import { expect } from 'chai';
 import mongoose from 'mongoose';
 
-import User from '../models/UserModels.js';
-import Product from '../models/ProductModel.js';
+import User from './models/UserModels.js';
+import Product from './models/ProductModel.js';
 
 // 1. Test api for register 
 describe('POST /api/auth/register', () => {
