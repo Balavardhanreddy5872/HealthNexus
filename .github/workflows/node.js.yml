@@ -1,15 +1,14 @@
-name: Node.JS CI/CD
+name: Node.js CI
 
 on:
   push:
-    paths:
-    - 'server/**'
-    branches: ["main"]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
+  build:
 
-  test:
-    name: Test
     runs-on: ubuntu-latest
 
     strategy:
@@ -17,16 +16,18 @@ jobs:
         node-version: [20.x]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Use Node.JS ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install dependencies and run tests
-      run: |
-        npm install
-      working-directory: server
-      
+        cache: 'npm'
+    - name: Install Dependencies
+      run: npm i express mongoose bcryptjs cors express fs helmet jsonwebtoken morgan multer nodemailer nodemon path razorpay rotating-file-stream
+      working-directory: backend
+    - name: Build
+      run: npm run build --if-present
+      working-directory: backend
+    - name: Run Tests
+      run: npm test
+      working-directory: backend
