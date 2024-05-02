@@ -45,6 +45,14 @@
     padding: 3rem;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-direction: row-reverse;
+}
+
 .col-md-3 {
     position: relative;
     width: 100%;
