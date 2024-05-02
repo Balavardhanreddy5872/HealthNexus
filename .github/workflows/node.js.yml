@@ -44,3 +44,6 @@ jobs:
         pm2 stop server
       
       working-directory: server
+
+
+# 
