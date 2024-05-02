@@ -5,6 +5,8 @@ on:
     paths:
     - 'server/**'
     branches: ["main"]
+  pull_request:
+    branches: [main]
 
 jobs:
 
