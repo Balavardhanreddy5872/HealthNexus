@@ -684,7 +684,7 @@ const Medicine = () => {
                 <div key={p._id} onClick={() => navigate(`/productdetails/${p.slug}`)}>
                   <div className="card m-2" style={{ width: '20rem', height: '60vh', cursor: 'pointer' }}>
                     <img
-                      src={`http://localhost:8081/api/product/medicine-photo/${p._id}`}
+                      src={`https://healthnexus.onrender.com/api/product/medicine-photo/${p._id}`}
                       className="card-img-top"
                       height="200px"
                       alt={p.name}
