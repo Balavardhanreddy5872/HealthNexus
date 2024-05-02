@@ -104,7 +104,6 @@ export const getProductController = async (req, res) => {
         .select("-photo")
         .sort({ createdAt: -1 });
 
-      // Set products in cache with a TTL of 3600 seconds (1 hour)
       await client.setex("products", 3600, JSON.stringify(products));
 
       res.status(200).send({
