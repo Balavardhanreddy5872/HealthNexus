@@ -24,7 +24,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 config();
 
-// hello
+
 //Connection to database 
 const dbUrl = 'mongodb+srv://iamdevil301:kbvr2003@cluster0.y4nkzqp.mongodb.net/shopping?retryWrites=true&w=majority&appName=Cluster0'
 mongoose.Promise = global.Promise;
