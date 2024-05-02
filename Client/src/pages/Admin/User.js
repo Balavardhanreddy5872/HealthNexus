@@ -223,7 +223,7 @@ const User = () => {
         `}
       </style>
       <div style={{ padding: '20px' }}>
-        <div className="row">
+        <div className="row" style={{flexDirection:"row-reverse"}}>
           <div className="col-md-3">
             <AdminMenu />
           </div>

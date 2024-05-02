@@ -53,7 +53,7 @@ const AdminOrders = () => {
   return (
     <Layout2 title={"All Orders Data"}>
       <div className="container-fluid p-3">
-        <div className="row">
+        <div className="row" style={{flexDirection:"row-reverse"}}>
           <div className="col-md-3">
             <AdminMenu />
           </div>
