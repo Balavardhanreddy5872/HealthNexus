@@ -10,6 +10,10 @@
     margin-right: 0;
 }
 
+.rowdoc{
+    max-width: 98%;
+}
+
 .card2 {
     position: relative;
     width: 300px;
