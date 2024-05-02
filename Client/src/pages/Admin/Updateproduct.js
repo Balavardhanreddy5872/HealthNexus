@@ -82,7 +82,7 @@ const UpdateProduct = () => {
   return (
     <Layout2 title={"Dashboard - Create Product"}>
       <div className="container-fluid p-3">
-        <div className="row">
+        <div className="row" style={{flexDirection:"row-reverse"}}>
           <div className="col-md-3">
             <AdminMenu />
           </div>
