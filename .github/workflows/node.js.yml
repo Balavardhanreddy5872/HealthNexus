@@ -3,8 +3,10 @@ name: Node.JS CI/CD
 on:
   push:
     paths:
-    - 'server/'
+    - 'server/**'
     branches: ["main"]
+  pull_request:
+    branches: [main]
 
 jobs:
 
@@ -26,20 +28,19 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies and run tests
+      env:
+        URL: ${{ secrets.URL }}
+        PORT: ${{ secrets.PORT }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        BRAINTREE_MERCHANT_ID: ${{ secrets.BRAINTREE_MERCHANT_ID }}
+        BRAINTREE_PUBLIC_KEY: ${{ secrets.BRAINTREE_PUBLIC_KEY }}
+        BRAINTREE_PRIVATE_KEY: ${{ secrets.BRAINTREE_PRIVATE_KEY }}
       run: |
+        npm install pm2 -g
         npm install
+        pm2 start server.js
+        sleep 20
         npm test
+        pm2 stop server
+      
       working-directory: server
-
-    - name: Build Docker image
-      run: |
-          docker build -t health-frontend .
-
-    - name: Push Docker image to registry
-      run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag health-frontend balavardhan/health-frontend
-          docker push balavardhan/health-frontend
-
-
-# yml file
