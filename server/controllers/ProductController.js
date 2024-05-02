@@ -87,7 +87,7 @@ export const addProductController = async (req, res) => {
 export const getProductController = async (req, res) => {
   try {
     console.log("Searching in redis cache");
-    const cachedProducts = await client.get('products');
+    const cachedProducts = await client.get("products");
     if (cachedProducts) {
       console.log("Found in cache");
       const parsedProducts = JSON.parse(cachedProducts);
@@ -104,7 +104,8 @@ export const getProductController = async (req, res) => {
         .select("-photo")
         .sort({ createdAt: -1 });
 
-      await client.set('products', JSON.stringify(products));
+      // Set products in cache with a TTL of 3600 seconds (1 hour)
+      await client.setex("products", 3600, JSON.stringify(products));
 
       res.status(200).send({
         success: true,
@@ -122,6 +123,7 @@ export const getProductController = async (req, res) => {
     });
   }
 };
+
 
 
 // get only one medicine "Search Bar" 
