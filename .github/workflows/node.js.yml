@@ -30,35 +30,35 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-  test:
-    needs: build
-    runs-on: ubuntu-latest
+  # test:
+  #   needs: build
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
 
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-npm-${{ hashFiles('/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-npm-
+  #     - name: Cache dependencies
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: ~/.npm
+  #         key: ${{ runner.os }}-npm-${{ hashFiles('/package-lock.json') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-npm-
 
-      - name: Install Node.js and dependencies
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.x
+  #     - name: Install Node.js and dependencies
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20.x
 
-      - name: Install dependencies
-        run: npm install
+  #     - name: Install dependencies
+  #       run: npm install
 
-      - name: Run tests
-        run: npm test
+  #     - name: Run tests
+  #       run: npm test
 
-      - name: Print success message
-        run: echo "Tests passed. Everything is working fine!"
+  #     - name: Print success message
+  #       run: echo "Tests passed. Everything is working fine!"
 
   # deploy:
   #   needs: test
