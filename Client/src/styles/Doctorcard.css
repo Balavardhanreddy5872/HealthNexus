@@ -110,14 +110,14 @@
 
 /* --------------- */
 
-
 .sub-main {
     /* width: 250px; */
     margin-left: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     /* float: left; */
     /* text-align: center; */
 }
-
 
 .button-three {
     cursor: pointer;
