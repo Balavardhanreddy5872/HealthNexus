@@ -16,6 +16,8 @@ import Patient from "./models/PatientReg.js";
 import bodyParser from 'body-parser';
 import multer from 'multer';
 import swaggerjsdoc from 'swagger-jsdoc';
+
+
 import swaggerui from 'swagger-ui-express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
