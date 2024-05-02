@@ -17,6 +17,7 @@ import bodyParser from 'body-parser';
 import multer from 'multer';
 import swaggerjsdoc from 'swagger-jsdoc';
 
+app.use("/uploads", express.static('/uploads'))
 
 import swaggerui from 'swagger-ui-express';
 import { fileURLToPath } from 'url';

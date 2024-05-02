@@ -13,7 +13,7 @@ const Doctor = () => {
   useEffect(() => {
     const fetchall = async () => {
       try {
-        const response = await fetch("http://localhost:8081/doctordet", {
+        const response = await fetch("https://healthnexus.onrender.com/doctordet", {
           credentials: "include",
         });
         if (!response.ok) {
@@ -56,7 +56,7 @@ const Doctor = () => {
     {appointment.status === "Accepted" && 
       filteredAppointments.push(
         <div className="col-md-3 mb-4">
-          <Doctorcard name={appointment.name} spec={appointment.specialization} desc={appointment.description} img={`http://localhost:8081/uploads/${appointment.profileImage}`} />
+          <Doctorcard name={appointment.name} spec={appointment.specialization} desc={appointment.description} img={`https://healthnexus.onrender.com/uploads/${appointment.profileImage}`} />
         </div>
       );
     }
