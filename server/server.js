@@ -48,7 +48,6 @@ const accessLogStream = rfs.createStream('access.log', {
 
 app.use(cors({ credentials: true, origin: ['http://localhost:3000', 'https://health-nexus.vercel.app'] }));
 
-
 app.use(json());
 app.use(morgan('combined', { stream: accessLogStream })); // Use combined format for logging
 app.use(bodyParser.json());
