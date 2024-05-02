@@ -45,7 +45,7 @@ const accessLogStream = rfs.createStream('access.log', {
   path: logDirectory
 });
 
-app.use(cors({ credentials: true, origin: ['http://localhost:3000', 'https://health-nexus.vercel.app/'] }));
+app.use(cors({ credentials: true, origin: ['http://localhost:3000', 'https://health-nexus.vercel.app'] }));
 
 
 app.use(json());
