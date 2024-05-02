@@ -10,7 +10,6 @@ const Doctorlogin = ({ userId }) => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                // 
                 const response = await fetch(`https://healthnexus.onrender.com/doctprofile`, {
                     method: 'POST',
                     body: JSON.stringify({
