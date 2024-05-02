@@ -4,12 +4,13 @@ const AdminMenu = () => {
   const style = {
     height: 'calc(100vh - 87px)',
     width: '300px',
-    position: 'absolute',
+    position: 'fixed',
     zIndex: '1',
     top: '85px',
     left: '0',
     backgroundColor: 'gray',
     color: 'white',
+    overflowX: 'hidden',
     paddingTop: '30px',
   };
 
