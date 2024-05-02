@@ -111,8 +111,7 @@ const Doctor = () => {
         <h1 style={{ textAlign: "center", textDecoration: "underline", color: "#32609e" }}>Our Doctors</h1>
         <p style={{ textAlign: "center", color: "#4fb5e6" }}>“Wherever the art of medicine is loved, there is also a love for humanity.”</p>
         <br />
-        <div className="sub-main" style={{display:'grid',gridTemplateColumns:'repeat(4, 1fr)'
-}}>
+        <div className="sub-main">
           {/* {auth?.user?.email && auth?.user?.email !== "admin@gmail.com" ? (
             <Link className="button-three" to="../d2">Join Us</Link>
           ) : (
@@ -124,7 +123,7 @@ const Doctor = () => {
         <br />
         <hr />
         <br />
-        <div className="rowdoc">
+        <div className="rowdoc" style={{display:'grid',gridTemplateColumns:'repeat(4, 1fr)'}}>
         {filteredAppointments.length > 0 ? (
           filteredAppointments
         ) : (
