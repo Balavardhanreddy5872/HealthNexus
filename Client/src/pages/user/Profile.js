@@ -52,7 +52,7 @@ const Profile = () => {
   return (
     <Layout2 title={"Your Profile"}>
       <div className="container-fluid p-3">
-        <div className="row">
+        <div className="row" style={{flexDirection:"row-reverse"}}>
           <div className="col-md-3">
             <UserMenu />
           </div>
