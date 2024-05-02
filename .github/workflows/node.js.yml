@@ -38,5 +38,5 @@ jobs:
     - name: Push Docker image to registry
       run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker tag health-frontend divvelasumanth555/health-frontend
-          docker push divvelasumanth555/health-frontend
+          docker tag health-frontend balavardhan/health-frontend
+          docker push balavardhan/health-frontend
