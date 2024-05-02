@@ -5,7 +5,7 @@ const UserMenu = () => {
     const style = {
         height: 'calc(100vh - 87px)',
         width: '360px',
-        // position: 'fixed',
+        position: 'fixed',
         zIndex: '1',
         top: '85px',
         left: '0',
@@ -14,6 +14,7 @@ const UserMenu = () => {
         overflowX: 'hidden',
         paddingTop: '30px',
     };
+    // doctor 
 
     const linkStyle = {
         display: 'flex',

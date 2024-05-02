@@ -62,7 +62,7 @@ const Dprofile = ({ userId }) => {
   return (
     <Layout>
       <div className="container-fluid p-3">
-        <div className="row">
+        <div className="row" style={{flexDirection:"row-reverse"}}>
           <div className="col-md-3">
             <UserMenu2 />
           </div>
